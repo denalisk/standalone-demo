@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ParentServiceService } from '../parent-service.service';
+import { RootServiceService } from '../root-service.service';
 
 @Component({
   standalone: true,
@@ -8,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StandaloneTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private parentService: ParentServiceService, private rootService: RootServiceService) { }
 
   ngOnInit(): void {
+    this.parentService.makeDo('StandaloneTestComponent');
+    this.rootService.makeDo('StandaloneTestComponent');
   }
-
 }
