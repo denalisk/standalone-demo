@@ -3,7 +3,6 @@ import { ParentServiceService } from '../parent-service.service';
 import { RootServiceService } from '../root-service.service';
 
 @Component({
-  standalone: true,
   selector: 'app-standalone-test',
   templateUrl: './standalone-test.component.html',
   styleUrls: ['./standalone-test.component.less']
