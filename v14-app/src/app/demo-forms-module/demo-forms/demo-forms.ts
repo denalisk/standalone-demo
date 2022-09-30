@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, UntypedFormControl } from '@angular/forms';
 
 // Form controls now accept a generic type argument
-const fooControl: FormControl<string> = new FormControl(
+const fooControl: FormControl<string | null> = new FormControl(
   'some initial string value'
 );
 
