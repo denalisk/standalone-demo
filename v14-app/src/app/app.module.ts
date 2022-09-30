@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StandaloneTestComponent } from './standalone-test/standalone-test.component';
-import { StandaloneChildComponent } from './standalone-child/standalone-child.component';
+import { FooBarModule } from './foo-bar/foo-bar.module';
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StandaloneTestComponent,
-    StandaloneChildComponent
-  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    FooBarModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

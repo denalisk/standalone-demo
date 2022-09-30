@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
-  title = 'v14-app';
+export class AppComponent  {
+  name = 'Angular ' + VERSION.major;
 }
